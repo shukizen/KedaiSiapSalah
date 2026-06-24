@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics - Kedai Siap Salah</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;900&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="admin-dashboard-body">
+
+    <!-- Sidebar -->
+    <aside class="ad-sidebar">
+        <!-- Logo -->
+        <div class="ad-logo-section">
+            <div class="ad-logo-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
+                    <path d="M7 2v20"></path>
+                    <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path>
+                </svg>
+            </div>
+            <div class="ad-logo-text">
+                <h1>Siap Salah</h1>
+                <span>RESTAURANT ADMIN</span>
+            </div>
+        </div>
+
+        <!-- Menu -->
+        <nav class="ad-nav">
+            <a href="admin-dashboard.html" class="ad-nav-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
+                Dashboard
+            </a>
+            <a href="admin-orders.html" class="ad-nav-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                Orders
+            </a>
+            <a href="admin-tables.html" class="ad-nav-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                Table Management
+            </a>
+            <a href="admin-menu.html" class="ad-nav-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                Menu Management
+            </a>
+            <a href="admin-analytics.html" class="ad-nav-item active">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                Analytics
+            </a>
+            <a href="#" class="ad-nav-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                Settings
+            </a>
+        </nav>
+
+        <!-- Sidebar Footer Profile -->
+        <div class="ad-sidebar-footer">
+            <div class="ad-profile">
+                <div class="ad-profile-avatar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#6B7B8D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                </div>
+                <div class="ad-profile-info">
+                    <strong>Admin Utama</strong>
+                    <span>Manager Restoran</span>
+                </div>
+            </div>
+            <div class="ad-sidebar-links">
+                <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg> Support</a>
+                <a href="admin-login.html" class="sign-out"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg> Sign Out</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="ad-main">
+        
+        <!-- Topbar -->
+        <header class="ad-topbar" style="justify-content: space-between;">
+            <div class="ad-date-picker" style="display: flex; align-items: center; gap: 8px; color: #6B7B8D; font-size: 14px;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px;"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                <span>1 Jan 2026 - 7 Jan 2026</span>
+            </div>
+            <div class="ad-topbar-actions" style="gap: 16px;">
+                <div class="ad-status-badge">
+                    <span class="status-dot"></span>
+                    Restoran Buka
+                </div>
+                <button class="ad-notif-btn" style="background: none; border: none;">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <div class="ad-content">
+            
+            <!-- Stats Row -->
+            <div class="ad-stats-grid">
+                <!-- Stat 1: Total Pendapatan -->
+                <div class="ad-stat-card aa-stat-card">
+                    <div class="ad-stat-header">
+                        <div class="aa-stat-icon" style="background: #FFF7ED; color: #EA580C;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"></rect><circle cx="12" cy="12" r="2"></circle><path d="M6 12h.01M18 12h.01"></path></svg>
+                        </div>
+                        <div class="aa-stat-badge positive">+12.5%</div>
+                    </div>
+                    <div class="aa-stat-content">
+                        <div class="ad-stat-label">Total Pendapatan</div>
+                        <div class="ad-stat-value">Rp 45.280.000</div>
+                    </div>
+                    <div class="aa-stat-footer">vs Rp 40.250.000 (Pekan Lalu)</div>
+                </div>
+
+                <!-- Stat 2: Pesanan Selesai -->
+                <div class="ad-stat-card aa-stat-card">
+                    <div class="ad-stat-header">
+                        <div class="aa-stat-icon" style="background: #EFF6FF; color: #2563EB;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        </div>
+                        <div class="aa-stat-badge positive">+8.2%</div>
+                    </div>
+                    <div class="aa-stat-content">
+                        <div class="ad-stat-label">Pesanan Selesai</div>
+                        <div class="ad-stat-value">1,284</div>
+                    </div>
+                    <div class="aa-stat-footer">Target Harian: 1,500</div>
+                </div>
+
+                <!-- Stat 3: Rata-rata Pesanan -->
+                <div class="ad-stat-card aa-stat-card">
+                    <div class="ad-stat-header">
+                        <div class="aa-stat-icon" style="background: #FAF5FF; color: #9333EA;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        </div>
+                        <div class="aa-stat-badge negative">-2.4%</div>
+                    </div>
+                    <div class="aa-stat-content">
+                        <div class="ad-stat-label">Rata-rata Pesanan</div>
+                        <div class="ad-stat-value">Rp 35.265</div>
+                    </div>
+                    <div class="aa-stat-footer">Optimal: Rp 40.000</div>
+                </div>
+
+                <!-- Stat 4: Okupansi Meja -->
+                <div class="ad-stat-card aa-stat-card">
+                    <div class="ad-stat-header">
+                        <div class="aa-stat-icon" style="background: #F0FDF4; color: #16A34A;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                        </div>
+                        <div class="aa-stat-badge positive">Optimal</div>
+                    </div>
+                    <div class="aa-stat-content">
+                        <div class="ad-stat-label">Okupansi Meja</div>
+                        <div class="ad-stat-value">78%</div>
+                    </div>
+                    <div class="aa-stat-footer">Waktu Puncak: 18:00 - 20:00</div>
+                </div>
+            </div>
+
+            <!-- Two Column Layout: Chart & Top Products -->
+            <div class="aa-middle-row">
+                <!-- Sales Chart -->
+                <div class="ad-chart-card aa-chart-section">
+                    <div class="ad-chart-header" style="margin-bottom: 24px;">
+                        <h2 style="font-size: 24px; font-weight: 600; color: #1B2A3D;">Performa Penjualan</h2>
+                        <div class="aa-dropdown">
+                            <span>7 Hari Terakhir</span>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </div>
+                    </div>
+                    <div class="ad-chart-area aa-chart-custom">
+                        <div class="chart-bars aa-chart-bars">
+                            <!-- Tooltip example for the tallest bar -->
+                            <div class="chart-column">
+                                <div class="chart-bar aa-bar-light" style="height: 115px;"></div>
+                                <span class="chart-label">SEN</span>
+                            </div>
+                            <div class="chart-column">
+                                <div class="chart-bar aa-bar-light" style="height: 153px;"></div>
+                                <span class="chart-label">SEL</span>
+                            </div>
+                            <div class="chart-column">
+                                <div class="chart-bar aa-bar-light" style="height: 140px;"></div>
+                                <span class="chart-label">RAB</span>
+                            </div>
+                            <div class="chart-column">
+                                <div class="chart-bar aa-bar-light" style="height: 204px;"></div>
+                                <span class="chart-label">KAM</span>
+                            </div>
+                            <div class="chart-column">
+                                <div class="chart-bar aa-bar-light" style="height: 179px;"></div>
+                                <span class="chart-label">JUM</span>
+                            </div>
+                            <div class="chart-column">
+                                <div class="chart-bar aa-bar-light" style="height: 230px;"></div>
+                                <span class="chart-label">SAB</span>
+                            </div>
+                            <div class="chart-column">
+                                <div class="chart-tooltip">Rp8.8M</div>
+                                <div class="chart-bar aa-bar-dark" style="height: 243px;"></div>
+                                <span class="chart-label">MIN</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Top Products List -->
+                <div class="ad-chart-card aa-top-products">
+                    <div class="ad-chart-header" style="margin-bottom: 24px;">
+                        <h2 style="font-size: 18px; font-weight: 400; color: #1B2A3D;">Produk Terlaris</h2>
+                        <a href="#" class="ad-link-all" style="font-weight: 400; font-size: 12px;">Lihat Semua</a>
+                    </div>
+                    <div class="aa-product-list">
+                        <!-- Product 1 -->
+                        <div class="aa-product-item">
+                            <img src="https://via.placeholder.com/56" alt="Salmon Mentai Roll">
+                            <div class="aa-product-info">
+                                <h4>Salmon<br>Mentaki Roll</h4>
+                                <span>Sushi & Sashimi</span>
+                            </div>
+                            <div class="aa-product-stats">
+                                <div class="aa-p-val">452 porsi</div>
+                                <div class="aa-p-trend positive">+12%</div>
+                            </div>
+                        </div>
+                        <!-- Product 2 -->
+                        <div class="aa-product-item">
+                            <img src="https://via.placeholder.com/56" alt="Triple Wagyu Burger">
+                            <div class="aa-product-info">
+                                <h4>Triple Wagyu<br>Burger</h4>
+                                <span>Main Course</span>
+                            </div>
+                            <div class="aa-product-stats">
+                                <div class="aa-p-val">318 porsi</div>
+                                <div class="aa-p-trend positive">+5%</div>
+                            </div>
+                        </div>
+                        <!-- Product 3 -->
+                        <div class="aa-product-item">
+                            <img src="https://via.placeholder.com/56" alt="Kyoto Matcha Iced">
+                            <div class="aa-product-info">
+                                <h4>Kyoto Matcha<br>Iced</h4>
+                                <span>Beverages</span>
+                            </div>
+                            <div class="aa-product-stats">
+                                <div class="aa-p-val">285 porsi</div>
+                                <div class="aa-p-trend negative">-2%</div>
+                            </div>
+                        </div>
+                        <!-- Product 4 -->
+                        <div class="aa-product-item">
+                            <img src="https://via.placeholder.com/56" alt="Truffle Parm Fries">
+                            <div class="aa-product-info">
+                                <h4>Truffle Parm<br>Fries</h4>
+                                <span>Appetizers</span>
+                            </div>
+                            <div class="aa-product-stats">
+                                <div class="aa-p-val">210 porsi</div>
+                                <div class="aa-p-trend positive">+18%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Activity Table -->
+            <div class="ad-table-card">
+                <div class="ad-table-header">
+                    <div>
+                        <h2 style="font-size: 18px; font-weight: 600;">Aktivitas Terbaru</h2>
+                        <p style="color: #6B7B8D; font-size: 12px; margin-top: 4px;">Riwayat transaksi dan operasional sistem terkini</p>
+                    </div>
+                    <button class="aa-filter-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+                        Filter Log
+                    </button>
+                </div>
+                <div class="ad-table-container">
+                    <table class="ad-table">
+                        <thead>
+                            <tr>
+                                <th>WAKTU</th>
+                                <th>TIPE</th>
+                                <th>AKTIVITAS</th>
+                                <th>STATUS</th>
+                                <th style="text-align: right;">NILAI/QTY</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Row 1 -->
+                            <tr>
+                                <td><span style="color: #6B7B8D;">10:42 WIB</span></td>
+                                <td>
+                                    <div class="aa-type-badge type-pesanan">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                        PESANAN
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="aa-activity-desc">
+                                        <strong>Pesanan Baru #ORD-9902</strong>
+                                        <span>Meja 12 • 4 Item</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="aa-status-badge status-proses">
+                                        Proses
+                                    </div>
+                                </td>
+                                <td style="text-align: right; font-weight: 500; color: #1B2A3D;">Rp 245.000</td>
+                            </tr>
+                            <!-- Row 2 -->
+                            <tr>
+                                <td><span style="color: #6B7B8D;">10:15 WIB</span></td>
+                                <td>
+                                    <div class="aa-type-badge type-staf">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                        STAF
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="aa-activity-desc">
+                                        <strong>Sari Dewi (Cashier)</strong>
+                                        <span>Sesi login berhasil dimulai</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="aa-status-badge status-active">
+                                        Active
+                                    </div>
+                                </td>
+                                <td style="text-align: right; color: #6B7B8D;">--</td>
+                            </tr>
+                            <!-- Row 3 -->
+                            <tr>
+                                <td><span style="color: #6B7B8D;">09:58 WIB</span></td>
+                                <td>
+                                    <div class="aa-type-badge type-pesanan">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                        PESANAN
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="aa-activity-desc">
+                                        <strong>Pembayaran Berhasil #ORD-9899</strong>
+                                        <span>Meja 05 • QRIS</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="aa-status-badge status-selesai">
+                                        Selesai
+                                    </div>
+                                </td>
+                                <td style="text-align: right; font-weight: 500; color: #1B2A3D;">Rp 158.000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="aa-load-more">
+                    Muat Aktivitas Lainnya
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>

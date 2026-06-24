@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Admin - Kedai Siap Salah</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="admin-login-body">
+    <!-- Background with Overlay -->
+    <div class="admin-bg"></div>
+    <div class="admin-bg-overlay"></div>
+
+    <div class="admin-login-container">
+        
+        <!-- Login Card -->
+        <div class="admin-login-card">
+            
+            <!-- Header (Logo & Title) -->
+            <div class="alc-header">
+                <div class="alc-logo-title">
+                    <div class="alc-logo">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 3l18 18M15 9l-6 6M9 9l6 6"/>
+                            <rect x="3" y="3" width="18" height="18" rx="4" fill="#A83200" stroke="none"/>
+                            <path d="M7 7l10 10M17 7L7 17" stroke="white" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h1 class="alc-title">Kedai Siap Salah</h1>
+                </div>
+                <p class="alc-subtitle">Portal Manajemen Admin & Staf</p>
+            </div>
+
+            <!-- Form -->
+            <form class="alc-form" onsubmit="event.preventDefault(); window.location.href='admin-dashboard.html';">
+                
+                <!-- Email Field -->
+                <div class="alc-field-group">
+                    <label class="alc-label" for="email">Email atau Username</label>
+                    <div class="alc-input-wrapper">
+                        <svg class="alc-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <input type="text" id="email" class="alc-input" placeholder="admin@siapsalah.com" required>
+                    </div>
+                </div>
+
+                <!-- Password Field -->
+                <div class="alc-field-group">
+                    <div class="alc-label-row">
+                        <label class="alc-label" for="password">Password</label>
+                        <a href="#" class="alc-forgot-link">Lupa Password?</a>
+                    </div>
+                    <div class="alc-input-wrapper">
+                        <svg class="alc-input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        <input type="password" id="password" class="alc-input" placeholder="••••••••" required>
+                        <button type="button" class="alc-pw-toggle">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Remember Me -->
+                <div class="alc-remember-row">
+                    <label class="alc-checkbox-label">
+                        <input type="checkbox" class="alc-checkbox">
+                        <span class="alc-checkbox-text">Ingat saya untuk sesi berikutnya</span>
+                    </label>
+                </div>
+
+                <!-- Submit -->
+                <button type="submit" class="alc-submit-btn">Masuk ke Dashboard</button>
+
+            </form>
+
+            <!-- Footer Info -->
+            <div class="alc-info-footer">
+                <svg viewBox="0 0 24 24" fill="#F59E0B" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                <span>Hanya untuk personil resmi yang terdaftar.</span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Page Footer -->
+    <div class="admin-page-footer">
+        <div class="apf-left">
+            &copy; 2026 Kedai Siap Salah. Semua Hak Dilindungi.
+        </div>
+        <div class="apf-right">
+            <a href="#" class="apf-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                Kebijakan Privasi
+            </a>
+            <a href="#" class="apf-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                Pusat Bantuan
+            </a>
+            <a href="#" class="apf-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                ID / EN
+            </a>
+        </div>
+    </div>
+</body>
+</html>

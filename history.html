@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kedai Siap Salah - Riwayat Pesanan</title>
+    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="menu-body">
+    <div class="mobile-app history-app">
+        
+        <!-- Header -->
+        <header class="payment-header">
+            <button class="back-btn" onclick="window.location.href='menu.html'">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#A83200" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            </button>
+            <h1 class="payment-title">Riwayat Pesanan</h1>
+            <div class="placeholder-icon" style="width: 40px;"></div>
+        </header>
+
+        <!-- Scrollable content -->
+        <div class="history-scroll-area">
+            
+            <!-- Filter Tabs -->
+            <div class="history-tabs">
+                <div class="history-tab active" data-filter="semua">Semua</div>
+                <div class="history-tab" data-filter="diproses">Diproses</div>
+                <div class="history-tab" data-filter="selesai">Selesai</div>
+                <div class="history-tab" data-filter="dibatalkan">Dibatalkan</div>
+            </div>
+
+            <!-- List of Orders -->
+            <div id="history-list">
+                <!-- Example Card 1 (Selesai) -->
+                <div class="history-card" data-status="selesai">
+                    <div class="history-card-header">
+                        <div class="hc-date-id">
+                            <span class="hc-date">24 Mei 2024, 12:45</span>
+                            <span class="hc-id">#ORD-2024-001</span>
+                        </div>
+                        <div class="hc-badge selesai">SELESAI</div>
+                    </div>
+                    <div class="history-card-body">
+                        <div class="hc-item-name">Indomie Nyemek</div>
+                        <div class="hc-item-desc">1 item dipesan</div>
+                    </div>
+                    <div class="history-card-footer">
+                        <div class="hc-total-box">
+                            <span class="hc-total-label">Total Harga</span>
+                            <span class="hc-total-val">Rp 22.200</span>
+                        </div>
+                        <button class="hc-action-btn btn-pesan-lagi" onclick="window.location.href='menu.html'">Pesan Lagi</button>
+                    </div>
+                </div>
+
+                <!-- Example Card 2 (Diproses) -->
+                <div class="history-card" data-status="diproses">
+                    <div class="history-card-header">
+                        <div class="hc-date-id">
+                            <span class="hc-date">24 Mei 2024, 13:10</span>
+                            <span class="hc-id">#ORD-2024-005</span>
+                        </div>
+                        <div class="hc-badge diproses">DIPROSES</div>
+                    </div>
+                    <div class="history-card-body">
+                        <div class="hc-item-name">Strawberry Tea</div>
+                        <div class="hc-item-desc">1 item dipesan</div>
+                    </div>
+                    <div class="history-card-footer">
+                        <div class="hc-total-box">
+                            <span class="hc-total-label">Total Harga</span>
+                            <span class="hc-total-val">Rp 17.000</span>
+                        </div>
+                        <button class="hc-action-btn btn-lihat-detail">Lihat Detail</button>
+                    </div>
+                </div>
+
+                <!-- Example Card 3 (Dibatalkan) -->
+                <div class="history-card cancelled" data-status="dibatalkan">
+                    <div class="history-card-header">
+                        <div class="hc-date-id">
+                            <span class="hc-date">23 Mei 2024, 19:20</span>
+                            <span class="hc-id">#ORD-2024-012</span>
+                        </div>
+                        <div class="hc-badge dibatalkan">DIBATALKAN</div>
+                    </div>
+                    <div class="history-card-body">
+                        <div class="hc-item-name">Lemon Tea</div>
+                        <div class="hc-item-desc strike">Rp 16.500</div>
+                    </div>
+                    <div class="history-card-footer">
+                        <div class="hc-cancel-reason">Pesanan dibatalkan oleh<br>pengguna</div>
+                        <button class="hc-action-btn btn-ulangi" onclick="window.location.href='menu.html'">Ulangi<br>Pesanan</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    
+    <script src="history.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kedai Siap Salah - Pesanan Selesai</title>
+    <link rel="stylesheet" href="style.css?v=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="menu-body">
+    <div class="mobile-app success-app">
+        
+        <!-- Header -->
+        <header class="payment-header">
+            <button class="back-btn" onclick="window.location.href='menu.html'">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#A83200" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            </button>
+            <h1 class="payment-title">Detail Pesanan</h1>
+            <div class="placeholder-icon" style="width: 40px;"></div>
+        </header>
+
+        <!-- Scrollable content -->
+        <div class="success-scroll-area">
+            
+            <!-- Status Card -->
+            <div class="success-card status-card">
+                <div class="status-icon-wrap">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="icon-check"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <h2 class="status-title">Pesanan Selesai</h2>
+                <p class="status-desc">Terima kasih atas kunjungan Anda!</p>
+                
+                <div class="status-divider"></div>
+                
+                <div class="status-meta">
+                    <div class="meta-col text-left">
+                        <span class="meta-label">NOMOR MEJA</span>
+                        <span class="meta-value" id="success-table">Meja 12</span>
+                    </div>
+                    <div class="meta-col text-right">
+                        <span class="meta-label">ID PESANAN</span>
+                        <span class="meta-value" id="success-order-id">#ORD-2024-001</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ringkasan Pesanan -->
+            <div class="success-card">
+                <h2 class="success-card-title">Ringkasan Pesanan</h2>
+                <div class="success-items-list" id="success-items">
+                    <!-- Dinamis -->
+                </div>
+            </div>
+
+            <!-- Rincian Pembayaran -->
+            <div class="success-card">
+                <h2 class="success-card-title uppercase-title">RINCIAN PEMBAYARAN</h2>
+                <div class="payment-summary-box no-bg">
+                    <div class="summary-row">
+                        <span class="summary-label">Subtotal <small id="success-items-count">(0 menu)</small></span>
+                        <span class="summary-val" id="success-subtotal">Rp 0</span>
+                    </div>
+                    <div class="summary-row">
+                        <span class="summary-label">Pajak PPN (11%)</span>
+                        <span class="summary-val" id="success-tax">Rp 0</span>
+                    </div>
+                    <div class="summary-divider"></div>
+                    <div class="summary-row total">
+                        <span class="summary-label">Total Dibayar</span>
+                        <span class="summary-val total-val" id="success-total">Rp 0</span>
+                    </div>
+                </div>
+
+                <div class="payment-method-badge">
+                    <div class="badge-left">
+                        <div class="badge-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#007DAC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><rect x="7" y="7" width="3" height="3"></rect><rect x="14" y="7" width="3" height="3"></rect><rect x="7" y="14" width="3" height="3"></rect><rect x="14" y="14" width="3" height="3"></rect></svg>
+                        </div>
+                        <div class="badge-info">
+                            <span class="badge-name" id="success-method-name">Pembayaran via QRIS</span>
+                            <span class="badge-status">SELESAI</span>
+                        </div>
+                    </div>
+                    <div class="badge-right">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#27AE60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sticky Bottom -->
+        <div class="success-bottom">
+            <button class="pay-now-btn" onclick="window.location.href='menu.html'">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+                Pesan Lagi
+            </button>
+        </div>
+
+    </div>
+    <script src="success.js?v=1"></script>
+</body>
+</html>

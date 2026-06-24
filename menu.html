@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kedai Siap Salah - Menu</title>
+    <link rel="stylesheet" href="style.css?v=1781634152163">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="menu-body">
+    <div class="mobile-app menu-app">
+        <div class="app-scroll-area">
+        
+        <!-- Header -->
+        <header class="menu-header" id="menu-header">
+            <h1 class="menu-logo" id="menu-logo">Kedai Siap Salah</h1>
+            <input type="text" id="search-input" class="search-input" placeholder="Cari menu..." onkeyup="filterMenu()">
+            <div class="header-icons">
+                <button class="icon-btn" id="search-btn" onclick="toggleSearch()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-close" style="display: none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+                <button class="icon-btn" onclick="toggleSidebar()">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Banner Image -->
+        <div class="menu-banner">
+            <img src="Images/Background%20Image/bg-image-menu.png" alt="Kedai Kopi" class="banner-img" onerror="this.src='Images/Background%20Image/bg-image.png'">
+        </div>
+
+        <!-- Table Info -->
+        <div class="table-info-container">
+            <div class="table-info-pill">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h18"/><path d="M5 8l-2 11"/><path d="M19 8l2 11"/><path d="M4 14h16"/></svg>
+                <span>Nomor Meja 12</span>
+            </div>
+        </div>
+
+        <!-- Categories -->
+        <div class="menu-categories" id="category-tabs">
+            <button class="category-btn cat-pill active" data-filter="all">Semua</button>
+            <button class="category-btn cat-pill" data-filter="makanan-berat">Makanan Berat</button>
+            <button class="category-btn cat-pill" data-filter="snack">Snack</button>
+            <button class="category-btn cat-pill" data-filter="coffee">Coffee</button>
+            <button class="category-btn cat-pill" data-filter="tea">Tea</button>
+        </div>
+
+        <!-- Menu Grid -->
+        <div class="menu-grid" id="menu-grid">
+            
+            <!-- Makanan Berat -->
+            <div class="menu-card" onclick="openDetailPage(this)" data-category="makanan-berat">
+                <div class="card-img-placeholder c-img-1" style="overflow: hidden; padding: 0;">
+                     <img src="Images/Makanan%20Berat/Indomie%20Nyemek.png" alt="Indomie Nyemek" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Indomie Nyemek</h3>
+                    <p class="card-desc">Indomie Telur, Tambahan Bumbu Rempah Dan ....</p>
+                    <div class="card-bottom">
+                        <span class="card-price">Rp 20.000</span>
+                        <button class="card-add-btn" onclick="addToCart(event, this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card" onclick="openDetailPage(this)" data-category="makanan-berat">
+                <div class="card-img-placeholder c-img-2" style="overflow: hidden; padding: 0;">
+                     <img src="Images/Makanan%20Berat/Nasi%20Goreng.png" alt="Nasi Goreng" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Nasi Goreng</h3>
+                    <p class="card-desc">Nasi Goreng Telur / Sosis / Bakso</p>
+                    <div class="card-bottom">
+                        <span class="card-price">Rp 20.000</span>
+                        <button class="card-add-btn" onclick="addToCart(event, this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card" onclick="openDetailPage(this)" data-category="makanan-berat">
+                <div class="card-img-placeholder c-img-3" style="overflow: hidden; padding: 0;">
+                     <img src="Images/Makanan%20Berat/Nasi%20Telur%20Pontianak.png" alt="Nasi Telur Pontianak" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Nasi Telur Pontianak</h3>
+                    <p class="card-desc">Nasi, Telur (Ceplok/Dadar)</p>
+                    <div class="card-bottom">
+                        <span class="card-price">Rp 20.000</span>
+                        <button class="card-add-btn" onclick="addToCart(event, this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card" onclick="openDetailPage(this)" data-category="makanan-berat">
+                <div class="card-img-placeholder c-img-4" style="overflow: hidden; padding: 0;">
+                     <img src="Images/Makanan%20Berat/Nasi%20Goreng%20Sambel%20Matah.png" alt="Nasi Goreng Sambel Matah" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Nasi Goreng Sambel Matah</h3>
+                    <p class="card-desc">Nasi, Telur, Sambel Matah</p>
+                    <div class="card-bottom">
+                        <span class="card-price">Rp 28.000</span>
+                        <button class="card-add-btn" onclick="addToCart(event, this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Snack -->
+            <div class="menu-card" onclick="openDetailPage(this)" data-category="snack" style="display: none;">
+                <div class="card-img-placeholder c-img-1" style="overflow: hidden; padding: 0;">
+                     <img src="Images/Snack/Mix%20Platters.png" alt="Mix Platers" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Mix Platers</h3>
+                    <p class="card-desc">Nuget, french fries, sosis tamaban saus pedas dan...</p>
+                    <div class="card-bottom">
+                        <span class="card-price">Rp 20.000</span>
+                        <button class="card-add-btn" onclick="addToCart(event, this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card" onclick="openDetailPage(this)" data-category="snack" style="display: none;">
+                <div class="card-img-placeholder c-img-2" style="overflow: hidden; padding: 0;">
+                     <img src="Images/Snack/French%20Fries.png" alt="French Fries" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">French Fries</h3>
+                    <p class="card-desc">Kentang Goreng Dengan Bumbu Tabur, Original...</p>
+                    <div class="card-bottom">
+                        <span class="card-price">Rp 16.000</span>
+                        <button class="card-add-btn" onclick="addToCart(event, this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card" onclick="openDetailPage(this)" data-category="snack" style="display: none;">
+                <div class="card-img-placeholder c-img-3" style="overflow: hidden; padding: 0;">
+                     <img src="Images/Snack/Ayam%20Pop.png" alt="Ayam Pop" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Ayam Pop</h3>
+                    <p class="card-desc">Ayam filet, tempung bumbu cruncy dgn tamb...</p>
+                    <div class="card-bottom">
+                        <span class="card-price">Rp 20.000</span>
+                        <button class="card-add-btn" onclick="addToCart(event, this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card" onclick="openDetailPage(this)" data-category="snack" style="display: none;">
+                <div class="card-img-placeholder c-img-4" style="overflow: hidden; padding: 0;">
+                     <img src="Images/Snack/Onion%20Ring.png" alt="Onion Ring" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Onion Ring</h3>
+                    <p class="card-desc">Bawang Bombai, Tebung Bumbu, Baluran Tepung...</p>
+                    <div class="card-bottom">
+                        <span class="card-price">Rp 16.000</span>
+                        <button class="card-add-btn" onclick="addToCart(event, this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card" onclick="openDetailPage(this)" data-category="snack" style="display: none;">
+                <div class="card-img-placeholder c-img-1" style="overflow: hidden; padding: 0;">
+                     <img src="Images/Snack/Usus%20Crispy.png" alt="Usus Crispy" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Usus Crispy</h3>
+                    <p class="card-desc">Usus ayam goreng crispy</p>
+                    <div class="card-bottom">
+                        <span class="card-price">Rp 16.500</span>
+                        <button class="card-add-btn" onclick="addToCart(event, this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card" onclick="openDetailPage(this)" data-category="snack" style="display: none;">
+                <div class="card-img-placeholder c-img-2" style="overflow: hidden; padding: 0;">
+                     <img src="Images/Snack/Dimsum.png" alt="Dimsum" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Dimsum</h3>
+                    <p class="card-desc">Satu Porsi Isi 4</p>
+                    <div class="card-bottom">
+                        <span class="card-price">Rp 17.500</span>
+                        <button class="card-add-btn" onclick="addToCart(event, this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coffee -->
+            <div class="menu-card" onclick="openDetailPage(this)" data-category="coffee" style="display: none;">
+                <div class="card-img-placeholder c-img-3" style="overflow: hidden; padding: 0;">
+                     <img src="Images/Coffee/Americano.png" alt="Americano" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Americano</h3>
+                    <p class="card-desc">Single espresso with water</p>
+                    <div class="card-bottom">
+                        <span class="card-price">Rp 16.000</span>
+                        <button class="card-add-btn" onclick="addToCart(event, this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card" onclick="openDetailPage(this)" data-category="coffee" style="display: none;">
+                <div class="card-img-placeholder c-img-4" style="overflow: hidden; padding: 0;">
+                     <img src="Images/Coffee/Kopi%20Gula%20Aren.png" alt="Kopi Gula Aren" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Kopi Gula Aren</h3>
+                    <p class="card-desc">Single espresso, gula aren with fresh milk</p>
+                    <div class="card-bottom">
+                        <span class="card-price">Rp 19.000</span>
+                        <button class="card-add-btn" onclick="addToCart(event, this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card" onclick="openDetailPage(this)" data-category="coffee" style="display: none;">
+                <div class="card-img-placeholder c-img-1" style="overflow: hidden; padding: 0;">
+                     <img src="Images/Coffee/Milo%20Coffee.png" alt="Milo Coffee" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Milo Coffee</h3>
+                    <p class="card-desc">Single espresso, fresh milk with milo</p>
+                    <div class="card-bottom">
+                        <span class="card-price">Rp 18.000</span>
+                        <button class="card-add-btn" onclick="addToCart(event, this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card" onclick="openDetailPage(this)" data-category="coffee" style="display: none;">
+                <div class="card-img-placeholder c-img-2" style="overflow: hidden; padding: 0;">
+                     <img src="Images/Coffee/Taro%20Coffee.png" alt="Taro Coffee" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Taro Coffee</h3>
+                    <p class="card-desc">Single espresso, taro, with fresh milk</p>
+                    <div class="card-bottom">
+                        <span class="card-price">Rp 28.000</span>
+                        <button class="card-add-btn" onclick="addToCart(event, this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card" onclick="openDetailPage(this)" data-category="coffee" style="display: none;">
+                <div class="card-img-placeholder c-img-3" style="overflow: hidden; padding: 0;">
+                     <img src="Images/Coffee/Cappucinno%20Hot.png" alt="Cappucinno Hot" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Cappucinno Hot</h3>
+                    <p class="card-desc">Single Espresso With Steam Milk</p>
+                    <div class="card-bottom">
+                        <span class="card-price">Rp 19.000</span>
+                        <button class="card-add-btn" onclick="addToCart(event, this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card" onclick="openDetailPage(this)" data-category="coffee" style="display: none;">
+                <div class="card-img-placeholder c-img-4" style="overflow: hidden; padding: 0;">
+                     <img src="Images/Coffee/Matcha%20Coffee.png" alt="Matcha Coffee" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Matcha Coffee</h3>
+                    <p class="card-desc">Single espresso, matcha with fresh milk</p>
+                    <div class="card-bottom">
+                        <span class="card-price">Rp 28.000</span>
+                        <button class="card-add-btn" onclick="addToCart(event, this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card" onclick="openDetailPage(this)" data-category="coffee" style="display: none;">
+                <div class="card-img-placeholder c-img-1" style="overflow: hidden; padding: 0;">
+                     <img src="Images/Coffee/Chocholate%20Coffee.png" alt="Chocolate Coffee" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Chocolate Coffee</h3>
+                    <p class="card-desc">Single Espresso, Chocolate, with Fresh Milk</p>
+                    <div class="card-bottom">
+                        <span class="card-price">Rp 19.500</span>
+                        <button class="card-add-btn" onclick="addToCart(event, this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card" onclick="openDetailPage(this)" data-category="coffee" style="display: none;">
+                <div class="card-img-placeholder c-img-2" style="overflow: hidden; padding: 0;">
+                     <img src="Images/Coffee/Red%20Velvet%20Coffee.png" alt="Red Velvet Coffee" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Red Velvet Coffee</h3>
+                    <p class="card-desc">Single espresso, taro, with fresh milk</p>
+                    <div class="card-bottom">
+                        <span class="card-price">Rp 19.500</span>
+                        <button class="card-add-btn" onclick="addToCart(event, this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tea -->
+            <div class="menu-card" onclick="openDetailPage(this)" data-category="tea" style="display: none;">
+                <div class="card-img-placeholder c-img-1" style="overflow: hidden; padding: 0;">
+                     <img src="Images/Tea/Strawberry%20Tea.png" alt="Strawberry Tea" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Strawberry Tea</h3>
+                    <p class="card-desc">Perpaduan tea with strawberry fruit</p>
+                    <div class="card-bottom">
+                        <span class="card-price">Rp 17.000</span>
+                        <button class="card-add-btn" onclick="addToCart(event, this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card" onclick="openDetailPage(this)" data-category="tea" style="display: none;">
+                <div class="card-img-placeholder c-img-2" style="overflow: hidden; padding: 0;">
+                     <img src="Images/Tea/Leci%20Tea.png" alt="Leci Tea" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Leci Tea</h3>
+                    <p class="card-desc">Perpaduan tea with leci fruit</p>
+                    <div class="card-bottom">
+                        <span class="card-price">Rp 17.000</span>
+                        <button class="card-add-btn" onclick="addToCart(event, this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-card" onclick="openDetailPage(this)" data-category="tea" style="display: none;">
+                <div class="card-img-placeholder c-img-3" style="overflow: hidden; padding: 0;">
+                     <img src="Images/Tea/Lemon%20Tea.png" alt="Lemon Tea" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Lemon Tea</h3>
+                    <p class="card-desc">Flavour lemon, tea, buah lemon slash</p>
+                    <div class="card-bottom">
+                        <span class="card-price">Rp 16.500</span>
+                        <button class="card-add-btn" onclick="addToCart(event, this)">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        
+                </div>
+        <!-- Sidebar Overlay & Menu -->
+        <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="user-avatar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                </div>
+                <div class="user-info">
+                    <div class="user-name">Testing User</div>
+                    <div class="user-table">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h18"/><path d="M5 8l-2 11"/><path d="M19 8l2 11"/><path d="M4 14h16"/></svg>
+                        Meja 12
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sidebar-menu">
+                <div class="sidebar-item active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path><path d="M7 2v20"></path><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path></svg>
+                    Menu Utama
+                </div>
+                <div class="sidebar-item" onclick="window.location.href='history.html'">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    Riwayat Pesanan
+                </div>
+                <div class="sidebar-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                    Tentang Kedai
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- Checkout Floating Bar -->
+        <div class="checkout-bar" id="checkout-bar" onclick="alert('Halaman Keranjang belum tersedia')">
+            <div class="checkout-info-group">
+                <div class="checkout-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+                <div class="checkout-text">
+                    <span id="checkout-count">1 ITEM DIPILIH</span>
+                    <strong id="checkout-total">Rp 20.000</strong>
+                </div>
+            </div>
+            <div class="checkout-action">
+                CHECK OUT <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </div>
+        </div>
+
+        <div id="toast" class="toast" style="background:#A83200;">Ditambahkan ke Pesanan!</div>
+    </div>
+    <script src="script.js?v=1781634152163"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kedai Siap Salah - Detail</title>
+    <link rel="stylesheet" href="style.css?v=1781631510962">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@300;400;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="mobile-app item-modal" style="display: flex; position: relative;">
+        <!-- Tombol Kembali -->
+        <button class="modal-close-btn" onclick="goBack()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        </button>
+        
+        <div class="modal-img-container">
+            <img id="modal-img" src="" alt="Menu Image">
+        </div>
+        
+        <div class="modal-content-scroll">
+            <div class="modal-info-card">
+                <h2 id="modal-title">Menu Name</h2>
+                <div id="modal-price" class="modal-price">Rp 0</div>
+                <p id="modal-desc" class="modal-desc">Description goes here...</p>
+            </div>
+            
+            <div class="modal-notes-section">
+                <h3>Catatan</h3>
+                <textarea id="modal-notes" placeholder="Contoh: Tanpa bawang goreng, bumbu dipisah, pedas sedang..."></textarea>
+            </div>
+        </div>
+        
+        <div class="modal-bottom-bar">
+            <div class="quantity-control">
+                <span>Jumlah Pesanan</span>
+                <div class="stepper">
+                    <button onclick="updateQty(-1)" class="stepper-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </button>
+                    <span id="modal-qty">1</span>
+                    <button onclick="updateQty(1)" class="stepper-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                    </button>
+                </div>
+            </div>
+            <button class="modal-add-btn" onclick="confirmAddToCart()">Tambah Pesanan - <span id="modal-total">Rp 0</span></button>
+        </div>
+        
+        <!-- Toast Notification -->
+        <div id="toast" class="toast" style="background:#A83200;">Ditambahkan ke Pesanan!</div>
+    </div>
+
+    <script src="detail.js"></script>
+</body>
+</html>

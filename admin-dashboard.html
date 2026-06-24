@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin - Kedai Siap Salah</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;900&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="admin-dashboard-body">
+
+    <!-- Sidebar -->
+    <aside class="ad-sidebar">
+        <!-- Logo -->
+        <div class="ad-logo-section">
+            <div class="ad-logo-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path>
+                    <path d="M7 2v20"></path>
+                    <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"></path>
+                </svg>
+            </div>
+            <div class="ad-logo-text">
+                <h1>Siap Salah</h1>
+                <span>ADMIN PANEL</span>
+            </div>
+        </div>
+
+        <!-- Menu -->
+        <nav class="ad-nav">
+            <a href="#" class="ad-nav-item active">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
+                Dashboard
+            </a>
+            <a href="admin-orders.html" class="ad-nav-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                Orders
+            </a>
+            <a href="admin-tables.html" class="ad-nav-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                Table Management
+            </a>
+            <a href="admin-menu.html" class="ad-nav-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                Menu Management
+            </a>
+            <a href="#" class="ad-nav-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                Analytics
+            </a>
+            <a href="#" class="ad-nav-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                Settings
+            </a>
+        </nav>
+
+        <!-- Sidebar Footer Profile -->
+        <div class="ad-sidebar-footer">
+            <div class="ad-profile">
+                <div class="ad-profile-avatar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#6B7B8D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                </div>
+                <div class="ad-profile-info">
+                    <strong>Admin Utama</strong>
+                    <span>Manager Restoran</span>
+                </div>
+            </div>
+            <div class="ad-sidebar-links">
+                <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg> Support</a>
+                <a href="admin-login.html" class="sign-out"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg> Sign Out</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="ad-main">
+        
+        <!-- Topbar -->
+        <header class="ad-topbar">
+            <div class="ad-search-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input type="text" placeholder="Cari pesanan atau menu...">
+            </div>
+            <div class="ad-topbar-actions">
+                <div class="ad-status-badge">
+                    <span class="status-dot"></span>
+                    Restoran Buka
+                </div>
+                <button class="ad-notif-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <div class="ad-content">
+            
+            <!-- Stats Row -->
+            <div class="ad-stats-grid">
+                <!-- Stat 1 -->
+                <div class="ad-stat-card">
+                    <div class="ad-stat-header">
+                        <div class="ad-stat-icon" style="background: #FFF0EB; color: #CC4918;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                        </div>
+                        <div class="ad-stat-badge" style="background: #F0FDF4; color: #27AE60;">+12%</div>
+                    </div>
+                    <div class="ad-stat-label">Total Penjualan</div>
+                    <div class="ad-stat-value">Rp 45.200.000</div>
+                </div>
+
+                <!-- Stat 2 -->
+                <div class="ad-stat-card">
+                    <div class="ad-stat-header">
+                        <div class="ad-stat-icon" style="background: #EFF6FF; color: #2563EB;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                        </div>
+                        <div class="ad-stat-badge" style="background: #F8FAFC; color: #64748B;">Hari Ini</div>
+                    </div>
+                    <div class="ad-stat-label">Pesanan Aktif</div>
+                    <div class="ad-stat-value">12</div>
+                </div>
+
+                <!-- Stat 3 -->
+                <div class="ad-stat-card">
+                    <div class="ad-stat-header">
+                        <div class="ad-stat-icon" style="background: #FAF5FF; color: #9333EA;">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h18"/><path d="M5 8l-2 11"/><path d="M19 8l2 11"/><path d="M4 14h16"/></svg>
+                        </div>
+                        <div class="ad-stat-badge" style="background: #F8FAFC; color: #64748B;">Kapasitas</div>
+                    </div>
+                    <div class="ad-stat-label">Total Meja</div>
+                    <div class="ad-stat-value">24</div>
+                </div>
+
+                <!-- Stat 4 -->
+                <div class="ad-stat-card">
+                    <div class="ad-stat-header">
+                        <div class="ad-stat-icon" style="background: #FEFCE8; color: #CA8A04;">
+                            <svg viewBox="0 0 24 24" fill="#FDE047" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                        </div>
+                    </div>
+                    <div class="ad-stat-label">Menu Terpopuler</div>
+                    <div class="ad-stat-value" style="font-size: 18px; font-weight: 500;">Americano</div>
+                </div>
+            </div>
+
+            <!-- Chart Row -->
+            <div class="ad-chart-card">
+                <div class="ad-chart-header">
+                    <div>
+                        <h2>Tren Penjualan 7 Hari</h2>
+                        <p>Pantau performa pendapatan harian Anda</p>
+                    </div>
+                    <div class="ad-chart-toggles">
+                        <button class="active">Pendapatan</button>
+                        <button>Volume</button>
+                    </div>
+                </div>
+                <div class="ad-chart-area">
+                    <!-- Custom CSS Bar Chart matching the design -->
+                    <div class="chart-lines">
+                        <div class="chart-line"></div>
+                        <div class="chart-line"></div>
+                        <div class="chart-line"></div>
+                        <div class="chart-line"></div>
+                        <div class="chart-line"></div>
+                    </div>
+                    <div class="chart-bars">
+                        <div class="chart-column">
+                            <div class="chart-bar" style="height: 50px;"></div>
+                            <span class="chart-label">Sen</span>
+                        </div>
+                        <div class="chart-column">
+                            <div class="chart-bar" style="height: 79px;"></div>
+                            <span class="chart-label">Sel</span>
+                        </div>
+                        <div class="chart-column">
+                            <div class="chart-bar" style="height: 135px;"></div>
+                            <span class="chart-label">Rab</span>
+                        </div>
+                        <div class="chart-column">
+                            <div class="chart-bar" style="height: 11px;"></div>
+                            <span class="chart-label">Kam</span>
+                        </div>
+                        <div class="chart-column">
+                            <div class="chart-bar" style="height: 25px;"></div>
+                            <span class="chart-label">Jum</span>
+                        </div>
+                        <div class="chart-column">
+                            <div class="chart-bar" style="height: 22px;"></div>
+                            <span class="chart-label">Sab</span>
+                        </div>
+                        <div class="chart-column">
+                            <div class="chart-bar" style="height: 204px;"></div>
+                            <span class="chart-label">Min</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table Row -->
+            <div class="ad-table-card">
+                <div class="ad-table-header">
+                    <h2>Pesanan Aktif</h2>
+                    <a href="#" class="ad-link-all">Lihat Semua <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+                </div>
+                <div class="ad-table-container">
+                    <table class="ad-table">
+                        <thead>
+                            <tr>
+                                <th>ORDER ID</th>
+                                <th>MEJA</th>
+                                <th>ITEM</th>
+                                <th>TOTAL</th>
+                                <th>STATUS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Row 1 -->
+                            <tr>
+                                <td><strong>#SO- 9020</strong></td>
+                                <td>
+                                    <div class="ad-table-meja">
+                                        <span>Meja</span>
+                                        <strong>12</strong>
+                                    </div>
+                                </td>
+                                <td class="ad-table-items">2x Indomie Nyemek,<br>2x Americano</td>
+                                <td><strong>Rp<br>72.000</strong></td>
+                                <td>
+                                    <div class="ad-status status-selesai">
+                                        <span class="dot"></span> Selesai
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- Row 2 -->
+                            <tr>
+                                <td><strong>#SO- 9021</strong></td>
+                                <td>
+                                    <div class="ad-table-meja">
+                                        <span>Meja</span>
+                                        <strong>08</strong>
+                                    </div>
+                                </td>
+                                <td class="ad-table-items">1x Mix Platters,<br>2x Kopi Gula Aren</td>
+                                <td><strong>Rp<br>85.000</strong></td>
+                                <td>
+                                    <div class="ad-status status-diproses">
+                                        <span class="dot"></span> Diproses
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- Row 3 -->
+                            <tr>
+                                <td><strong>#SO- 9022</strong></td>
+                                <td>
+                                    <div class="ad-table-meja">
+                                        <span>Meja</span>
+                                        <strong>04</strong>
+                                    </div>
+                                </td>
+                                <td class="ad-table-items">1x Nasi Goreng,<br>1x Strawberry Tea</td>
+                                <td><strong>Rp<br>37.000</strong></td>
+                                <td>
+                                    <div class="ad-status status-menunggu">
+                                        <span class="dot"></span> Menunggu
+                                    </div>
+                                </td>
+                            </tr>
+                            <!-- Row 4 -->
+                            <tr>
+                                <td><strong>#SO- 9023</strong></td>
+                                <td>
+                                    <div class="ad-table-meja">
+                                        <span>Meja</span>
+                                        <strong>02</strong>
+                                    </div>
+                                </td>
+                                <td class="ad-table-items">1x French Fries,<br>1x Lemon Tea</td>
+                                <td><strong>Rp<br>32.500</strong></td>
+                                <td>
+                                    <div class="ad-status status-dibatalkan">
+                                        <span class="dot"></span> Dibatalkan
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
