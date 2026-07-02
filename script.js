@@ -188,6 +188,22 @@ function updateCheckoutBar() {
 document.addEventListener('DOMContentLoaded', () => {
     updateCheckoutBar();
     restoreSteppersFromCart();
+    
+    // Set user name in sidebar from last order if available
+    try {
+        const lastOrderStr = localStorage.getItem('lastOrder');
+        if (lastOrderStr) {
+            const lastOrder = JSON.parse(lastOrderStr);
+            if (lastOrder && lastOrder.name) {
+                const userNameEls = document.querySelectorAll('.user-name');
+                userNameEls.forEach(el => {
+                    el.textContent = lastOrder.name;
+                });
+            }
+        }
+    } catch(e) {
+        // ignore
+    }
 });
 
 // Memulihkan stepper dari localStorage saat halaman dimuat kembali

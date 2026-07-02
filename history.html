@@ -27,6 +27,7 @@
             <!-- Filter Tabs -->
             <div class="history-tabs">
                 <div class="history-tab active" data-filter="semua">Semua</div>
+                <div class="history-tab" data-filter="belum-bayar">Belum Bayar</div>
                 <div class="history-tab" data-filter="diproses">Diproses</div>
                 <div class="history-tab" data-filter="selesai">Selesai</div>
                 <div class="history-tab" data-filter="dibatalkan">Dibatalkan</div>
@@ -34,6 +35,7 @@
 
             <!-- List of Orders -->
             <div id="history-list">
+
                 <!-- Example Card 1 (Selesai) -->
                 <div class="history-card" data-status="selesai">
                     <div class="history-card-header">
@@ -98,6 +100,30 @@
                 </div>
             </div>
 
+        </div>
+
+        <!-- QRIS Modal for History -->
+        <div class="qris-modal-overlay" id="history-qris-modal" style="display: none;">
+            <div class="qris-modal-content">
+                <div class="qris-header">
+                    <h3>Pembayaran QRIS</h3>
+                    <button class="qris-close-btn" onclick="closeHistoryQrisModal()">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    </button>
+                </div>
+                <div class="qris-body">
+                    <p class="qris-total-label">Total Tagihan</p>
+                    <h2 class="qris-total-val" id="history-qris-total">Rp 0</h2>
+                    <div class="qris-code-container">
+                        <img src="" id="history-qris-image" alt="QRIS Code" class="qris-image">
+                        <div class="qris-logo-overlay">QRIS</div>
+                    </div>
+                    <p class="qris-instruction">Lanjutkan pembayaran dengan scan kode QR di atas.</p>
+                </div>
+                <div class="qris-footer">
+                    <button class="simulate-success-btn" onclick="simulateHistoryQrisSuccess()">Simulasikan Bayar Berhasil</button>
+                </div>
+            </div>
         </div>
 
     </div>

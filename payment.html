@@ -114,7 +114,63 @@
             </div>
         </div>
 
+        <!-- Loading Overlay -->
+        <div class="payment-loading-overlay" id="payment-loading" style="display: none;">
+            <div class="spinner-circle"></div>
+            <h3 class="loading-text">Memproses QRIS...</h3>
+            <p class="loading-subtext">Mohon tunggu sebentar</p>
+        </div>
+
+        <!-- QRIS Modal -->
+        <div class="qris-modal-overlay" id="qris-modal" style="display: none;">
+            <div class="qris-modal-content">
+                <div class="qris-header">
+                    <h3>Pembayaran QRIS</h3>
+                    <button class="qris-close-btn" onclick="closeQrisModal()">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    </button>
+                </div>
+                <div class="qris-body">
+                    <p class="qris-total-label">Total Tagihan</p>
+                    <h2 class="qris-total-val" id="qris-total-val">Rp 0</h2>
+                    <div class="qris-code-container">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=KEDAISIAPSALAH-PAYMENT-SIMULATION" alt="QRIS Code" class="qris-image">
+                        <div class="qris-logo-overlay">QRIS</div>
+                    </div>
+                    <p class="qris-instruction">Buka aplikasi m-banking atau e-wallet Anda, lalu scan kode QR di atas.</p>
+                </div>
+                <div class="qris-footer">
+                    <button class="simulate-success-btn" onclick="simulateQrisSuccess()">Simulasikan Bayar Berhasil</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cash Modal -->
+        <div class="qris-modal-overlay" id="cash-modal" style="display: none;">
+            <div class="qris-modal-content" style="padding-top: 40px; text-align: center;">
+                <div class="qris-body" style="margin-bottom: 24px;">
+                    <div style="width: 80px; height: 80px; background: #FFF1EC; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; color: #A83200;">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width: 40px; height: 40px;"><rect x="2" y="5" width="20" height="14" rx="2" ry="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg>
+                    </div>
+                    <h3 style="font-size: 1.4rem; font-weight: 800; color: #271812; font-family: 'Plus Jakarta Sans', sans-serif; margin-bottom: 8px;">Bayar di Kasir</h3>
+                    <p class="qris-instruction" style="margin-top: 0; color: #8C6A5A;">Silakan tunjukkan layar ini atau sebutkan nomor meja Anda kepada kasir.</p>
+                    
+                    <div style="background: #FAFAFA; border: 2px dashed #E8E0D8; border-radius: 16px; padding: 24px; margin: 24px 0;">
+                        <p style="font-size: 0.95rem; color: #8C6A5A; margin-bottom: 8px;">ID Pesanan</p>
+                        <h4 id="cash-order-id" style="font-size: 2rem; font-weight: 800; color: #1B2A3D; font-family: 'Plus Jakarta Sans', sans-serif; margin-bottom: 0; letter-spacing: 2px;">ORD-0000</h4>
+                    </div>
+
+                    <p class="qris-total-label">Total Tagihan</p>
+                    <h2 class="qris-total-val" id="cash-total-val" style="margin-bottom: 0;">Rp 0</h2>
+                </div>
+                <div class="qris-footer">
+                    <button class="simulate-success-btn" onclick="simulateCashSuccess()">Cek Status Pesanan</button>
+                    <button class="qris-close-btn" onclick="closeCashModal()" style="width: 100%; background: transparent; border-radius: 30px; margin-top: 8px; color: #8C6A5A; font-weight: 600;">Tutup</button>
+                </div>
+            </div>
+        </div>
+
     </div>
-    <script src="payment.js?v=1"></script>
+    <script src="payment.js?v=4"></script>
 </body>
 </html>
